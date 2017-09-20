@@ -1,0 +1,83 @@
+<h2>¿Quienes somos?</h2>
+<div class="media">
+    <img class="img-thumbnail d-flex align-self-center mr-3" src="https://secure.meetupstatic.com/photos/event/9/6/6/c/600_460418508.jpeg" alt="Nosotros">
+    <div class="media-body">
+        <h5 class="mt-0">.Net de la ciudad de Buenos Aires</h5>
+        <p>
+            Somos una comunidad de desarrolladores .Net de la ciudad de Buenos Aires. 
+        </p>
+        <p class="mb-0">
+            La intención es generar un espacio donde compartir conocimiento, anécdotas y todo tipo de experiencias que puedan generar interés en cualquiera de nosotros. 
+            Están todos invitados a proponer charlas, workshop o cualquier actividad.
+        </p>
+    </div>
+  </div>
+
+<h2>El Team</h2>
+<div class="container"  *ngIf="organizadores">
+    <h3>Organizadores</h3>
+    <div class="row">
+        <div *ngFor="let organizador of organizadores">
+            <div class="col-3">
+                <div class="team-member">
+                    <div class="member-pic">
+                        <img class="rounded-circle" src="{{organizador.photoURL}}" alt="{{organizador.name}}">
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-inner">
+                            <h5 class="colored-text">{{organizador.name}}</h5>
+                        <div class="small-text">
+                            Organizador 
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a target="_blank" href="{{organizador.linkedIn}}">
+                                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a target="_blank" href="{{organizador.twitter}}">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="colaboradores">
+    <h3>Colaboradores</h3>
+    <div class="row">
+        <div *ngFor="let colaborador of colaboradores" class="col-1-4">
+            <div class="col-md-3">
+                <div class="team-member">
+                    <div class="member-pic">
+                        <img class="rounded-circle" src="{{colaborador.photoURL}}" alt="{{colaborador.name}}">
+                    </div>
+                    <div class="member-details">
+                        <div class="member-details-inner">
+                            <h5 class="colored-text">{{colaborador.name}}</h5>
+                        <div class="small-text">
+                            Colaborador 
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <a target="_blank" href="{{colaborador.linkedIn}}">
+                                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a target="_blank" href="{{colaborador.twitter}}">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
