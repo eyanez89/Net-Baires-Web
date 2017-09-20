@@ -1,0 +1,13 @@
+.sponsor-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sponsor-list-item {
+    display: inline;
+}
+
+.sponsor-img{
+    max-height: 250px;
+}
