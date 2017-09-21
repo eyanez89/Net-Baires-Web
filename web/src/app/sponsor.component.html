@@ -1,10 +1,11 @@
-<div class="container" *ngIf="sponsors">
-    <h3>Sponsors</h3>
-    <ul class="sponsor-list" *ngFor="let sponsor of sponsors">
-        <li class="sponsor-list-item">
-            <a target="_blank" href="{{sponsor.URL}}">
-                <img class="sponsor-img" src="{{sponsor.photoURL}}" alt="{{sponsor.name}}">
-            </a>
-        </li>
-    </ul>
+<div class="clients white-bg">
+    <div class="container">
+        <ul class="client-logos" *ngFor="let sponsor of sponsors">
+            <li>
+                <a target="_blank" href="{{sponsor.URL}}">
+                    <img src="{{sponsor.photoURL}}" alt="{{sponsor.name}}">
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

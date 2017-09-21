@@ -5,7 +5,8 @@ import { MemberService } from './member.service';
 
 @Component({
   selector: 'nosotros',
-  templateUrl: './nosotros.component.html'
+  templateUrl: './nosotros.component.html',
+  styleUrls: [ './nosotros.component.css' ]
 })
 export class NosotrosComponent {
     organizadores: Member[];
